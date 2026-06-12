@@ -5,6 +5,10 @@ function updateTime() {
 
     timeText.innerHTML = daTime
 }
+//prevents text highligting //
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
 
 setInterval(updateTime, 1000);
 
