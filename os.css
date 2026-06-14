@@ -1,18 +1,29 @@
 /* The entire website follows the astrict unless stated otherwise*/
 *{
     font-family: neuropol;
+    margin: 0;
+    
 }
 #topbar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: solid 1px;
-    margin: 0;
+    justify-content:flex-start;
+    gap: 20px; 
+    background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+    color: black;
+    
 }
+.toprow {
+    transform: translateY(9px);
+}
+/* the icon at the top of the page */
 .frutiger-icon {
     width: 30px;
     height: 30px;
+    display: flex;
 }
 body {
     background-image: url(photo/asadal_stock_61.jpg);
@@ -26,6 +37,7 @@ body {
 }
 /*window container */
 .window {
+    margin-top: 15px;
     background-color: rgba(255, 255, 255, 0.5);
     width: 500px;
     height: 400px;
