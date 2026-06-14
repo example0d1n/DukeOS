@@ -21,7 +21,7 @@ body {
 /*window title bar */
 .main-header{
     height: 60px;
-    width: 500px;
+    width: 460px;
   
   /* Background Layers: 1. White top specular highlight, 2. Aero gradient base */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%), 
@@ -34,8 +34,9 @@ body {
      /* Subtle inner glow */
     box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 5px rgba(0, 0, 0, 0.3);
   
-    /* Text Styling (Gill Sans or Lucida Grande are very Frutiger) */
-    text-align: right;
+    /* Text Styling */
+    display: flex;
+    align-items: center;
     padding: 0 20px;
     color: #ffffff;
     font-family:neuropol ;
@@ -43,7 +44,10 @@ body {
     font-weight: bold;
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
 }
-
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
 .btn-minimize, .btn-maximize{
     width: 50px;
     height: 40px;
@@ -52,8 +56,14 @@ body {
     width: 70px;
     height: 40px;
 }
-.btn-minimize, .btn-maximize, .btn-close {
-   float: left;
-
-
+.window-body {
+    background-color: rgba(#12efff, #FFF, #12efff, 0.9);
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080; 
+    border-radius: 5%;
+    padding: 15px;
+    margin: 2px 2px 2px 4px;
+    width: 460px;
+    min-height: 280px;
+    transform: translateY(-330px);
 }
