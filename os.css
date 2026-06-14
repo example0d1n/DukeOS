@@ -1,0 +1,59 @@
+body {
+    background-image: url(photo/asadal_stock_61.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: neuropol ;
+    src: url(fonts/neuropol-x-cufonfonts-webfont/neuropol\ x\ free.woff);
+}
+/*window container */
+.window {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    height: 400px;
+    border: solid 2px black;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgb(127, 185, 255);
+ 
+}
+/*window title bar */
+.main-header{
+    height: 60px;
+    width: 500px;
+  
+  /* Background Layers: 1. White top specular highlight, 2. Aero gradient base */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%), 
+    linear-gradient(to bottom, #7da5c9 0%, #2f699c 50%, #174278 100%);
+  
+    /* Glossy/soft borders */
+    border: 1px solid #102a4a;
+    border-radius: 8px 8px 0 0;
+  
+     /* Subtle inner glow */
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 5px rgba(0, 0, 0, 0.3);
+  
+    /* Text Styling (Gill Sans or Lucida Grande are very Frutiger) */
+    text-align: right;
+    padding: 0 20px;
+    color: #ffffff;
+    font-family:neuropol ;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn-minimize, .btn-maximize{
+    width: 50px;
+    height: 40px;
+}
+.btn-close{
+    width: 70px;
+    height: 40px;
+}
+.btn-minimize, .btn-maximize, .btn-close {
+   float: left;
+
+
+}
