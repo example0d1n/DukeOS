@@ -1,5 +1,6 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("music-section"));
 
  function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -8,6 +9,28 @@ dragElement(document.getElementById("welcome"));
     }
     setInterval(updateTime, 1000);
 
+    //
+    var welcomeScreen = document.querySelector("#welcome")
+
+    var welcomeScreenClose = document.querySelector("#btn-close")
+
+    var welcomeScreenOpen = document.querySelector("#btn-maximize")
+    
+    function closeWindow(element) {
+  element.style.display = "none"
+}
+    function openWindow(element) {
+  element.style.display = "block"
+}
+  welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
+
+    //
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {

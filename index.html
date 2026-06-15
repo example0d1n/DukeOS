@@ -23,9 +23,9 @@
             <div class="main-header">
                 <span class="Frutiger">Welcome to Frutiger Aero</span>
                 <div class="window-controls" >
-                    <img src="photo/Frutiger aero icons/X Button.png" class="btn-close">
-                    <img src="photo/Frutiger aero icons/Maximize Button.png" class="btn-maximize">
-                    <img src="photo/Frutiger aero icons/Minimize Button.png" class="btn-minimize">
+                    <img src="photo/Frutiger aero icons/X Button.png" id="btn-close">
+                    <img src="photo/Frutiger aero icons/Maximize Button.png" id="btn-maximize">
+                    <img src="photo/Frutiger aero icons/Minimize Button.png" id="btn-minimize">
                 </div>
             </div>
             <div class="window-body">
@@ -33,16 +33,32 @@
         </div>
         </div>
             <section>
-                <div id="header">
-                    <img src="photo/Frutiger aero icons/Music Note.png" class="music-note" />
-                    <p id="header">
-                        Music
-                    </p>
+                <div id="music-section" class="music-handle">
+                    <div id="music-header">
+                        <img src="photo/Frutiger aero icons/Music Note.png" class="music-note" />
+                        <p>
+                            Music
+                        </p>
+                    </div>
+                </div>
+                <div id="note-section" class="note-handle">
+                    <div id="note-header">
+                        <img src="photo/vista_sticky_notes.ico" class="note-pad" />
+                    </div>
                 </div>
             </section>
+            <section>
+                <audio controls autoplay src="audio/20260614_191301852.mp3" type="audio/mp3" >
+                    <img src="photo/Frutiger aero icons/Aero Circle 07.png" />
+                </audio>
+            </section>
     </main>
-    <script src="action.js">
-       
-    </script>
+    <script src="action.js"></script>
+    <footer>
+        <div id="doc">
+
+        </div>
+    </footer>
 </body>
 </html>
+

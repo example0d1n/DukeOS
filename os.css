@@ -2,7 +2,8 @@
 *{
     font-family: neuropol;
     margin: 0;
-    cursor: url(photo/Frutiger\ Aero--cursor--SweezyCursors.png), pointer;
+    cursor: url(photo/Frutiger\ Aero--pointer--SweezyCursors.png), pointer;
+    cursor: url(photo/Frutiger\ Aero--cursor--SweezyCursors.png), grabbing;
 }
 
 #topbar {
@@ -48,10 +49,9 @@ body {
     border: solid 2px black;
     border-radius: 5%;
     box-shadow: 5px 5px 5px rgb(127, 185, 255);
-    
+    transform: translateX(700px);
     position: absolute;
- 
-}
+ }
 /*window title bar */
 .main-header{
     height: 60px;
@@ -80,6 +80,7 @@ body {
     text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
 
     position:absolute;
+    
 }
 .window-controls {
     display: flex;
@@ -89,11 +90,11 @@ body {
     position: flex;
     
 }
-.btn-minimize, .btn-maximize{
+#btn-minimize, #btn-maximize{
     width: 50px;
     height: 40px;
 }
-.btn-close{
+#btn-close{
     width: 70px;
     height: 40px;
 }
@@ -110,8 +111,26 @@ body {
 
     position: absolute;
 }
+.music-handle {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+}
+
+#music-header {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    cursor: grab;
+}
+
 .music-note {
     height: 50px;
     width: 50px;
-    margin: 40px 0 0 40px ;
+    margin: 0;
+}
+.note-handle {
+    position: absolute;
+    top: 120px;
+    left: 90px;
 }
