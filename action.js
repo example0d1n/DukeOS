@@ -1,7 +1,9 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("music-section"));
-dragElement(document.getElementById("note-section"))
+dragElement(document.getElementById("note-section"));
+dragElement(document.querySelector("#note-welcome"));
+
 
  function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -31,7 +33,6 @@ welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
 
-    //
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -85,6 +86,8 @@ function dragElement(element) {
   }
 }
 
+// icon selection function
+
 var selectedIcon = undefined
 
 function selectedIcon(element) {
@@ -106,3 +109,61 @@ function handleIconTap(element) {
   }
 }
 
+// window closing function for notes window
+var notesScreen = document.querySelector("#note-welcome")
+
+var notesScreenClose = document.querySelector("#note-close")
+
+notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+// window ontap function
+
+var biggestIndex = 1;
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+    handleWindowTap(element)
+  )
+}
+
+function handleWindowTap(element) {
+  biggestIndex++; //Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++; // increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+}
+
+// blocking windows from overriding
+
+var topBar = document.querySelector("#topbar")
+
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex +1;
+  deselectIcon(selectedIcon)
+}
+
+function initializeWindow(elementName) {
+  var screen = document.querySelector("#welcome" + elementName)
+  addWindowTapHandling(screen)
+  makeClosable(elementName)
+  dragElement(screen)
+}
+
+var content = [
+  {
+    title: "Aero",
+  }
+]
