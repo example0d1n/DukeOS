@@ -1,6 +1,7 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("music-section"));
+dragElement(document.getElementById("note-section"))
 
  function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -83,3 +84,25 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
+
+var selectedIcon = undefined
+
+function selectedIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+}
+
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined
+}
+
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element)
+    openWindow(window)
+  } else {
+    selectIcon(element)
+  }
+}
+
