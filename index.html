@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="photo/Frutiger aero icons/Aero Circle 04.png" />
     <link rel="stylesheet" href="os.css" />
+        <link rel="stylesheet" href="calculator.css" />
     <title>DukeOS</title>
 </head>
 <body>
@@ -17,6 +18,7 @@
         <p class="toprow">View</p>
         <p class="toprow">Go</p>
         <p class="toprow" id="timeElement"> Sat Jun 13 11:57 PM</p>
+
     </div>
     <main>
         <div id="welcome" class="window">
@@ -77,7 +79,29 @@
                     </div>
                 </div>
             </section>
-            <!--- d 
+            <section>
+                <div id="calculator">
+                    <input id="display" readonly>
+                    <div id="keys">
+                        <button onClick="appendToDisplay('+')" class="operator-btn">+</button>
+                        <button onClick="appendToDisplay('7')">7</button>
+                        <button onClick="appendToDisplay('8')">8</button>
+                        <button onClick="appendToDisplay('9')">9</button>
+
+                        <button onClick="appendToDisplay('-')" class="operator-btn">-</button>
+                        <button onClick="appendToDisplay('+')">4</button>
+                        <button onClick="appendToDisplay('+')">5</button>
+                        <button onClick="appendToDisplay('+')">6</button>
+
+                        <button onClick="appendToDisplay('+')" class="operator-btn">/</button>
+                        <button onClick="appendToDisplay('+')">3</button>
+                        <button onClick="appendToDisplay('+')">2</button>
+                        <button onClick="appendToDisplay('+')">1</button>
+
+                    </div>
+                </div>
+            </section>
+     <!---d 
             <div class="background-audio">
                 <audio autoplay controls loop src="audio/20260614_191301852.mp3" type="audio/mp3" >
                     <img src="photo/Frutiger aero icons/Aero Circle 07.png" />
@@ -86,11 +110,15 @@
             d --->
     </main>
     <script src="action.js"></script>
+    <script type="module" src="calculator.js"></script>
     <footer>
         <div id="doc">
 
         </div>
     </footer>
+    <!--
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/laufey/pl.u-XkD0vDkhgDqY29W"></iframe>
+    --- >
 </body>
 </html>
 

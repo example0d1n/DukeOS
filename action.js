@@ -62,11 +62,11 @@ function dragElement(element) {
     initialY = e.clientY;
     // Step 8: Set up event listeners for mouse movement (`elementDrag`) and mouse button release (`closeDragElement`).
     document.onmouseup = stopDragging;
-    document.onmousemove = dragElement;
+      document.onmousemove = elementDrag;
   }
 
   // Step 9: Define the `elementDrag` function to calculate the new position of the element based on mouse movement.
-  function dragElement(e) {
+    function elementDrag(e) {
     e = e || window.event;
     e.preventDefault();
     // Step 10: Calculate the new cursor position.
@@ -88,24 +88,25 @@ function dragElement(element) {
 
 // icon selection function
 
-var selectedIcon = undefined
+var selectedIcon = undefined;
 
-function selectedIcon(element) {
+function selectIcon(element) {
   element.classList.add("selected");
-  selectedIcon = element
+  selectedIcon = element;
 }
 
 function deselectIcon(element) {
+  if (!element) return;
   element.classList.remove("selected");
-  selectedIcon = undefined
+  selectedIcon = undefined;
 }
 
 function handleIconTap(element) {
   if (element.classList.contains("selected")) {
-    deselectIcon(element)
-    openWindow(window)
+    deselectIcon(element);
+    openWindow(window);
   } else {
-    selectIcon(element)
+    selectIcon(element);
   }
 }
 
@@ -131,11 +132,6 @@ function handleWindowTap(element) {
   element.style.zIndex = biggestIndex;
 }
 
-function openWindow(element) {
-  element.style.display = "flex";
-  biggestIndex++; // increment biggestIndex by 1
-  element.style.zIndex = biggestIndex;
-}
 
 // blocking windows from overriding
 
@@ -145,14 +141,16 @@ function openWindow(element) {
   element.style.display = "flex";
   biggestIndex++;
   element.style.zIndex = biggestIndex;
+  if (typeof element.focus === 'function') element.focus();
   topBar.style.zIndex = biggestIndex + 1;
 }
 
 function handleWindowTap(element) {
   biggestIndex++;
   element.style.zIndex = biggestIndex;
-  topBar.style.zIndex = biggestIndex +1;
-  deselectIcon(selectedIcon)
+  if (typeof element.focus === 'function') element.focus();
+  topBar.style.zIndex = biggestIndex + 1;
+  if (selectedIcon) deselectIcon(selectedIcon);
 }
 
 function initializeWindow(elementName) {
@@ -167,3 +165,11 @@ var content = [
     title: "Aero",
   }
 ]
+
+// Attach bring-to-front handlers for existing windows on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.window, .note-window').forEach(function(w) {
+    if (!w.hasAttribute('tabindex')) w.setAttribute('tabindex', '0');
+    addWindowTapHandling(w);
+  });
+});
