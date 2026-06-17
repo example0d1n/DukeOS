@@ -225,13 +225,42 @@ body {
     position: absolute;
 }
 #note-welcome {
-    display: none;
+    
+}
+footer {
+    display: flex;
+   
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-top: 10px;
+    background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+    backdrop-filter: blur(10px);
+}
+#doc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.calc-handle {
+    position: absolute;
+    top: 280px;
+    left: 80px;
 
+ }
+ #calculator-header {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    cursor: grab;
 
-
-
+ }
 /*
 #note-header:active {
     text-decoration: underline;

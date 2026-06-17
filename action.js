@@ -3,7 +3,7 @@ dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("music-section"));
 dragElement(document.getElementById("note-section"));
 dragElement(document.querySelector("#note-welcome"));
-
+dragElement(document.querySelector("#calculatorheader"));
 
  function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -116,6 +116,14 @@ var notesScreen = document.querySelector("#note-welcome")
 var notesScreenClose = document.querySelector("#note-close")
 
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+// window closing function for calc window
+
+var calcScreen = document.querySelector("#calculator")
+
+var calcScreenClose = document.querySelector("#calc-close")
+
+calcScreenClose = addEventListener("click", () => closeWindow(calcScreen))
 
 // window ontap function
 

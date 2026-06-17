@@ -80,24 +80,41 @@
                 </div>
             </section>
             <section>
-                <div id="calculator">
+                <div id="calc-section" class="calc-handle">
+                    <div id="calculator-header">
+                        <img src="photo/calculator.png" style="height: 50px; width: 50px;" />
+                        <p> Calculator </p>
+                    </div>
+                </div>
+                <div id="calculatorheader">
+                    <div class="calc-title">
+                        Calculator
+                        <img src="photo/Frutiger aero icons/X Button.png" id="calc-close" style="height: 25px; margin-left: 120px; top: 20px;" class="btn-close" />
+                    </div>
                     <input id="display" readonly>
                     <div id="keys">
-                        <button onClick="appendToDisplay('+')" class="operator-btn">+</button>
-                        <button onClick="appendToDisplay('7')">7</button>
-                        <button onClick="appendToDisplay('8')">8</button>
-                        <button onClick="appendToDisplay('9')">9</button>
+                        <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                        <button onclick="appendToDisplay('7')">7</button>
+                        <button onclick="appendToDisplay('8')">8</button>
+                        <button onclick="appendToDisplay('9')">9</button>
 
-                        <button onClick="appendToDisplay('-')" class="operator-btn">-</button>
-                        <button onClick="appendToDisplay('+')">4</button>
-                        <button onClick="appendToDisplay('+')">5</button>
-                        <button onClick="appendToDisplay('+')">6</button>
+                        <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                        <button onclick="appendToDisplay('4')">4</button>
+                        <button onclick="appendToDisplay('5')">5</button>
+                        <button onclick="appendToDisplay('6')">6</button>
 
-                        <button onClick="appendToDisplay('+')" class="operator-btn">/</button>
-                        <button onClick="appendToDisplay('+')">3</button>
-                        <button onClick="appendToDisplay('+')">2</button>
-                        <button onClick="appendToDisplay('+')">1</button>
+                        <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+                        <button onclick="appendToDisplay('1')">1</button>
+                        <button onclick="appendToDisplay('2')">2</button>
+                        <button onclick="appendToDisplay('3')">3</button>
+                        <button oncLick="appendToDisplay('/')" class="operator-btn">/</button>
 
+                        <button onclick="appendToDisplay('0')">0</button>
+                        <button onclick="appendToDisplay('.')">.</button>
+                        <button onclick="clearDisplay()" class="clear">C</button>
+                        <button onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)" class="operator-btn">DEL</button>
+                        <script src="calculator.js"></script>
+                        <link rel="stylesheet" href="calculator.css" />
                     </div>
                 </div>
             </section>
@@ -110,15 +127,17 @@
             d --->
     </main>
     <script src="action.js"></script>
-    <script type="module" src="calculator.js"></script>
+    
     <footer>
         <div id="doc">
-
+            <img src="photo/vista_sticky_notes.ico" class="note-pad"/>
+            <img src="photo/Frutiger aero icons/Music Note.png" class="music-note" />
+            <img src="photo/calculator.png" style="height: 50px; width: 50px;" />
         </div>
     </footer>
-    <!--
-    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/laufey/pl.u-XkD0vDkhgDqY29W"></iframe>
-    --- >
+  
+    <!-- <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/laufey/pl.u-XkD0vDkhgDqY29W"></iframe> -->
+   
 </body>
 </html>
 
