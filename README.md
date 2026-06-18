@@ -4,4 +4,6 @@ I initially wanted to make the OS theme centered around the jazz artist, Laufey.
 
 I prefered this design because it was bright and vibrant, unlike my previous design choice. In this second interation of the web-OS, I took on challenges with pride and care because I wanted this to work; I wanted to see my vision come to life. As a result, it has. In the first iteration, I couldn't figure out how to move the handle or figure out how I wanted to design it. By the second iteration I could!
 
+To close the tabs, click the "X" button. The maximize and minimize buttons don't work, but are simply there as decoration. In my second version of my web-based OS, I plan to add function to those buttons. 
+
 This repository uses HTML, CSS, and JavaScript for functionality. 
