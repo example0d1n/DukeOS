@@ -4,6 +4,7 @@ dragElement(document.getElementById("weather-section"));
 dragElement(document.getElementById("note-section"));
 dragElement(document.querySelector("#note-welcome"));
 dragElement(document.querySelector("#calculatorheader"));
+dragElement(document.querySelector("#weather-header"));
 
  function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -141,6 +142,23 @@ if (calcIcon) {
     openWindow(calcScreen)
   })
 }
+
+
+// window closing function for weather app
+var weatherScreen = document.querySelector("#weatherheader").parentElement;
+
+var weatherScreenClose = document.querySelector("#weather-close")
+
+var weatherIcon = document.querySelector("#weather-section")
+
+weatherScreenClose.addEventListener("click", () => closeWindow(weatherScreen));
+
+if (weatherIcon) {
+  weatherIcon.addEventListener("click", function() {
+    openWindow(weatherScreen)
+  })
+}
+
 
 // window ontap function
 

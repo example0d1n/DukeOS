@@ -9,7 +9,7 @@
     margin-top: 12px;
     margin-left: 350px;
 }
-.weatherbackground {
+.weather-header {
     transform: translateY(200px);
     display:flex;
     margin: auto;
@@ -27,6 +27,7 @@
     margin-bottom: 15px;
 }
 .cityInput {
+    margin-top: 5px;
     margin-left: 5px;
     font-size: 15px;
     padding: 10px;
@@ -70,5 +71,6 @@
     font-size: 5.5rem;
 }
 .errorDisplay{ 
+    margin-top: 5px;
     font-size: 1.5rem;
 }
