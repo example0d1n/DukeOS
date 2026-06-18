@@ -20,7 +20,7 @@
     border-radius: 5%;
     box-shadow: 5px 5px 5px rgb(127, 185, 255);
     overflow: hidden;
-   /* display:none; */
+    display:none;
 }
 .weatherForm{
     margin-top: 15px;
