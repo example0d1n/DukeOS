@@ -10,15 +10,17 @@
     margin-left: 350px;
 }
 .weatherbackground {
-    transform: translateY(300px);
+    transform: translateY(200px);
     display:flex;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.5);
     width: 400px;
-    height: 300px;
+    height: 500px;
     border: solid 2px black;
     border-radius: 5%;
     box-shadow: 5px 5px 5px rgb(127, 185, 255);
+    overflow: hidden;
+   /* display:none; */
 }
 .weatherForm{
     margin-top: 15px;
@@ -36,6 +38,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    display:none;
 }
 .weather-submit{
     padding: 10px;
@@ -48,4 +51,24 @@
     background-color: rgb(165, 207, 244);
     border: solid 2px black;
     border-radius: 2rem;
+}
+.cityDisplay{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+.tempDisplay {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+.tempDisplay, .humidityDisplay, .descDisplay, .weatherEmoji .errorDisplay{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+.weatherEmoji{
+    font-size: 5.5rem;
+}
+.errorDisplay{ 
+    font-size: 1.5rem;
 }
