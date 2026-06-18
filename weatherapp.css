@@ -1,0 +1,51 @@
+
+#weatherheader{
+    position: absolute;
+}
+#weather-close{
+    display: flex;
+    width: 40px;
+    height: 15px;
+    margin-top: 12px;
+    margin-left: 350px;
+}
+.weatherbackground {
+    transform: translateY(300px);
+    display:flex;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    height: 300px;
+    border: solid 2px black;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgb(127, 185, 255);
+}
+.weatherForm{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.cityInput {
+    margin-left: 5px;
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid black; 
+    border-radius: 2rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.weather-submit{
+    padding: 10px;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.weather-submit:hover{
+    background-color: rgb(165, 207, 244);
+    border: solid 2px black;
+    border-radius: 2rem;
+}

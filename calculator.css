@@ -27,6 +27,11 @@
     display: none;
 
 }
+#calc-close{
+    height: 25px; 
+    margin-left: 120px; 
+    top: 20px;
+}
 #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

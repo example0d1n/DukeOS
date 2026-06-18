@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="os.css" />
     <link rel="stylesheet" href="calculator.css" />
     <link rel="stylesheet" href="playlist.css" />
+    <link rel="stylesheet" href="weatherapp.css" />
     <title>DukeOS</title>
 </head>
 <body>
@@ -80,7 +81,7 @@
                 <div id="calculatorheader">
                     <div class="calc-title">
                         Calculator
-                        <img src="photo/Frutiger aero icons/X Button.png" id="calc-close" style="height: 25px; margin-left: 120px; top: 20px;" class="btn-close" />
+                        <img src="photo/Frutiger aero icons/X Button.png" id="calc-close"  class="btn-close" />
                     </div>
                     <input id="display" readonly>
                     <div id="keys">
@@ -108,12 +109,44 @@
                     </div>
                 </div>
             </section>
+                <section class="weatherbackground">
+                <div id="weatherheader">
+                    <img src="photo/Frutiger aero icons/X Button.png" id="weather-close" class="btn-close"/>
+                    <form class="weatherForm">
+                        <input type="text" class="cityInput"placeholder="Enter city">
+                        <input type="submit" class="weather-submit" value="Get Weather">
+                    </form>
+                    <div class="card">
+                        <h1 class=""cityDisplay>Chicago</h1>
+                        <p class="tempDisplay">69°</p>
+                        <p class="humidityDisplay">Humidity: 60%</p>
+                        <p class="descDisplay">Clear Skies</p>
+                        <p class="weatherEmoji">🌞</p>
+                        <p class="errorDisplay">Enter a realll city</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <!-- <section id="Laufey">
                 <div id="playlistheader">
                     <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1pD4vWZNoZFAnPedJa3Di7?utm_source=generator&si=c219350ce7894b32" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
                 </div> 
             </section> -->
-    
     </main>
     <script src="action.js"></script>
     <script src="calculator.js"></script>
