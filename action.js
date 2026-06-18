@@ -1,6 +1,6 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
-dragElement(document.getElementById("music-section"));
+dragElement(document.getElementById("weather-section"));
 dragElement(document.getElementById("note-section"));
 dragElement(document.querySelector("#note-welcome"));
 dragElement(document.querySelector("#calculatorheader"));
@@ -115,15 +115,32 @@ var notesScreen = document.querySelector("#note-welcome")
 
 var notesScreenClose = document.querySelector("#note-close")
 
+var noteIcon = document.querySelector("#note-section")
+
 notesScreenClose.addEventListener("click", () => closeWindow(notesScreen));
+
+var noteContent = document.querySelector("#note-content")
+if (noteIcon) {
+  noteIcon.addEventListener("click", function() {
+    openWindow(notesScreen)
+  })
+}
 
 // window closing function for calc window
 
-var calcScreen = document.querySelector("#calculator")
+var calcScreen = document.querySelector("#calculatorheader")
 
 var calcScreenClose = document.querySelector("#calc-close")
 
-calcScreenClose = addEventListener("click", () => closeWindow(calcScreen))
+var calcIcon = document.querySelector("#calc-section")
+
+
+calcScreenClose.addEventListener("click", () => closeWindow(calcScreen))
+if (calcIcon) {
+  calcIcon.addEventListener("click", function() {
+    openWindow(calcScreen)
+  })
+}
 
 // window ontap function
 
@@ -146,7 +163,7 @@ function handleWindowTap(element) {
 var topBar = document.querySelector("#topbar")
 
 function openWindow(element) {
-  element.style.display = "flex";
+  element.style.display = "block";
   biggestIndex++;
   element.style.zIndex = biggestIndex;
   if (typeof element.focus === 'function') element.focus();
@@ -176,8 +193,16 @@ var content = [
 
 // Attach bring-to-front handlers for existing windows on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.window, .note-window').forEach(function(w) {
+  document.querySelectorAll('.window, .note-window, #calculatorheader').forEach(function(w) {
     if (!w.hasAttribute('tabindex')) w.setAttribute('tabindex', '0');
     addWindowTapHandling(w);
   });
 });
+
+// when handle is selected, the window will open
+function initializeIcon(name) {
+var icon = document.querySelector("#" + name + "section")
+var screen = document.querySelector("#" + name)
+icon.addEventListener("click", () => handleIconTap(icon, screen));
+}
+initializeIcon("notes")

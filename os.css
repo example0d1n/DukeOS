@@ -116,13 +116,13 @@ body {
 }
 /* music app customization and handle customization */
 
-.music-handle {
+.weather-handle {
     position: absolute;
     top: 120px;
     left: 90px;
 }
 
-#music-header {
+#weather-header {
     display: flex;
     align-items:center;
     gap: 10px;
@@ -134,7 +134,7 @@ body {
 }
 */
 
-.music-note {
+.weather-note {
     height: 50px;
     width: 50px;
     margin: 0;
@@ -167,8 +167,20 @@ body {
     width: 400px;
     min-height: 280px;
     transform: translateY(70px);
-
     position: absolute;
+}
+#note-content {
+    width: calc(100% - 2px);
+    height: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 10px;
+    box-sizing: border-box;
+    background: transparent;
 }
 .note-header {
     height: 60px;
@@ -225,7 +237,7 @@ body {
     position: absolute;
 }
 #note-welcome {
-    
+    display: none;
 }
 footer {
     display: flex;

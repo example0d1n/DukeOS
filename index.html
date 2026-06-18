@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="photo/Frutiger aero icons/Aero Circle 04.png" />
     <link rel="stylesheet" href="os.css" />
-        <link rel="stylesheet" href="calculator.css" />
+    <link rel="stylesheet" href="calculator.css" />
+    <link rel="stylesheet" href="playlist.css" />
     <title>DukeOS</title>
 </head>
 <body>
@@ -31,15 +32,21 @@
                 </div>
             </div>
             <div class="window-body">
-            <p>Welcome to DukeOS! PLEASE read the READ.ME on my GitHub to understand the window functionality!</p>
+            <p>Welcome to DukeOS! PLEASE read the READ.ME on my GitHub to understand the window functionality! </p>
+            <br><br>
+            <ul style="text-decoration: none; text-decoration-line: none; list-style: none;">
+                <li><a href="https://github.com/example0d1n">GitHub Profile - example0d1n</a></li>
+                <br><br>
+                <li><a href="https://github.com/example0d1n/DukeOS#dukeos-is-an-web-based-operating-system-named-after-my-cat-duke">DukeOS</a></li>
+            </ul>
         </div>
         </div>
             <section>
-                <div id="music-section" class="music-handle selected">
-                    <div id="music-header">
-                        <img src="photo/Frutiger aero icons/Music Note.png" class="music-note" />
+                <div id="weather-section" class="weather-handle selected">
+                    <div id="weather-header">
+                        <img src="photo/weather app.png" class="weather-note" />
                         <p>
-                            Music
+                            Weather app
                         </p>
                     </div>
                 </div>
@@ -50,7 +57,7 @@
                     </div>
                 </div>
                 <div id="note-welcome" class="note-window">
-                    <div class="note-header">
+                    <div id="note-welcomeheader" class="note-header">
                         <span class="notesaero">Notes Aero</span>
                         <div class="note-controls">
                             <img src="photo/Frutiger aero icons/X Button.png" id="note-close">
@@ -59,23 +66,7 @@
                         </div>
                     </div>
                     <div class="note-body">
-                        <h4>To do list</h4>
-                        <br>
-                        <ul>
-                            <li>
-                                Feed cats
-                            </li>
-                            <br>
-                            <li>
-                                Code for 1hr
-                            </li>
-                            <br>
-                            <li><b>start learning</b> JavaScript</li>
-                            <br>
-                            <li>Email my teacher</li>
-                            <br>
-                            <li>Watch Buffy the Vampire Slayer</li>
-                        </ul>
+                        <textarea id="note-content" rows="7" cols="42" placeholder="Type your notes here..."></textarea>
                     </div>
                 </div>
             </section>
@@ -107,36 +98,34 @@
                         <button onclick="appendToDisplay('1')">1</button>
                         <button onclick="appendToDisplay('2')">2</button>
                         <button onclick="appendToDisplay('3')">3</button>
-                        <button oncLick="appendToDisplay('/')" class="operator-btn">/</button>
+                        <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
 
                         <button onclick="appendToDisplay('0')">0</button>
                         <button onclick="appendToDisplay('.')">.</button>
                         <button onclick="clearDisplay()" class="clear">C</button>
                         <button onclick="document.getElementById('display').value = document.getElementById('display').value.slice(0, -1)" class="operator-btn">DEL</button>
-                        <script src="calculator.js"></script>
-                        <link rel="stylesheet" href="calculator.css" />
+                        <button onclick="calculate()">=</button>
                     </div>
                 </div>
             </section>
-     <!---d 
-            <div class="background-audio">
-                <audio autoplay controls loop src="audio/20260614_191301852.mp3" type="audio/mp3" >
-                    <img src="photo/Frutiger aero icons/Aero Circle 07.png" />
-                </audio>
-            </div>
-            d --->
+            <!-- <section id="Laufey">
+                <div id="playlistheader">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1pD4vWZNoZFAnPedJa3Di7?utm_source=generator&si=c219350ce7894b32" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
+                </div> 
+            </section> -->
+    
     </main>
     <script src="action.js"></script>
-    
+    <script src="calculator.js"></script>
     <footer>
         <div id="doc">
             <img src="photo/vista_sticky_notes.ico" class="note-pad"/>
-            <img src="photo/Frutiger aero icons/Music Note.png" class="music-note" />
+            <img src="photo/weather app.png" class="weather-note" />
             <img src="photo/calculator.png" style="height: 50px; width: 50px;" />
         </div>
     </footer>
   
-    <!-- <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/laufey/pl.u-XkD0vDkhgDqY29W"></iframe> -->
+    
    
 </body>
 </html>

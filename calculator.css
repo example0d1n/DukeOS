@@ -24,6 +24,7 @@
     box-shadow: 5px 5px 5px rgb(127, 185, 255);
     position: absolute;
     overflow: hidden;
+    display: none;
 
 }
 #keys {
